@@ -17,7 +17,8 @@ class Tree
   end
 
   def get_children(tree_hash)
-    
+    # map through hash and get node name and children.... this should probably just be done in initialize
+    # tree_hash.map {|k,v| [k, v.get_children] }
   end
 
   def visit_all(&block)
