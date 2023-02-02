@@ -37,4 +37,6 @@ puts "please enter the path to the file:"
 file_path = gets.chomp
 puts "please enter the word you want to find:"
 word = gets.chomp
-file = File.fnmatch(word)
+thereg = /#{word}/i
+file = File.readlines(file_path).grep(thereg).any?
+puts file
